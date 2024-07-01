@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Event Ticket Booking Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background-image:url('https://wallpaperboat.com/wp-content/uploads/2019/10/best-background-for-website-14.jpg');">
+<i>
+  <div class="container mt-5">
+    <u><h2>Event Ticket Booking Form</h2></u>  
+    <form id="booking-form">
+      
+    
+      <div class="form-section">
+       <u><h2>Event Details</h2></u>
+        <div class="mb-3">
+          <label for="event-name" class="form-label">Event Name</label>
+          <input type="text" class="form-control" id="event-name" required>
+        </div>
+        <div class="mb-3">
+          <label for="event-date" class="form-label">Event Date</label>
+          <input type="date" class="form-control" id="event-date" required>
+        </div>
+        <div class="mb-3">
+          <label for="event-time" class="form-label">Event Time</label>
+          <input type="time" class="form-control" id="event-time" required>
+        </div>
+        <div class="mb-3">
+          <label for="event-location" class="form-label">Event Location</label>
+          <input type="text" class="form-control" id="event-location" required>
+        </div>
+        <div class="mb-3">
+          <label for="event-category" class="form-label">Event Category</label>
+          <select class="form-select" id="event-category">
+            <option value="events">Events</option>
+            <option value="concert">Concert</option>
+            <option value="conference">Conference</option>
+            <option value="workshop">Workshop</option>
+            <option value="seminar">Seminar</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="event-description" class="form-label">Short Event Description</label>
+          <textarea class="form-control" id="event-description" rows="3"></textarea>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <u><h2>Ticket Selection</h2></u>
+        <div class="mb-3">
+          <label for="num-tickets" class="form-label">Number of Tickets</label>
+          <input type="number" class="form-control" id="num-tickets" min="1" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Select Class</label>
+          <select class="form-select" id="ticket-type">
+            <option value="select">Select</option>
+            <option value="All">All</option>
+            <option value="2S">2S</option>
+            <option value="SL">SL</option>
+            <option value="3A">3A</option>
+            <option value="CC">CC</option>
+            <option value="2A">2A</option>
+            <option value="1A">1A</option>
+            <option value="FC">FC</option>
+            <option value="EC">EC</option>
+            <option value="3E">3E</option>
+            <option value="GN">GN</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="seating-preference" class="form-label">Seating Preference</label>
+          <select class="form-select" id="ticket-type">
+            <option value="select">Select</option>
+            <option value="All">All</option>
+            <option value="lower birth">Lower Birth</option>
+            <option value="middle birth">Middle Birth</option>
+            <option value="upper birth">Upper Birth</option>
+            <option value="side lower birth">Side Lower Birth</option>
+            <option value="side upper birth">Side Upper Birth</option>
+          </select>
+        </div>
+      </div>
+
+ 
+      <div class="form-section">
+        <u><h2>User Information</h2></u>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="first-name" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="first-name" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="last-name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="last-name" required>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="phone-number" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phone-number">
+        </div>
+        <div class="mb-3">
+          <label for="country" class="form-label">Country</label>
+          <select class="form-select" id="country">
+     
+            <option value="India">India</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="state-province" class="form-label">State/Province</label>
+          <input type="text" class="form-control" id="state-province">
+        </div>
+        <div class="mb-3">
+          <label for="city" class="form-label">City</label>
+          <input type="text" class="form-control" id="city" required>
+        </div>
+        <div class="mb-3">
+          <label for="address-line-1" class="form-label">Address Line 1</label>
+          <input type="text" class="form-control" id="address-line-1" required>
+        </div>
+        <div class="mb-3">
+          <label for="address-line-2" class="form-label">Address Line 2</label>
+          <input type="text" class="form-control" id="address-line-2">
+        </div>
+        <div class="mb-3">
+          <label for="postal-code" class="form-label">Postal Code/ZIP Code</label>
+          <input type="text" class="form-control" id="postal-code" required>
+        </div>
+      </div>
+
+     
+      <div class="form-section">
+        <u><h2>Additional Information</h2></u>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="special-needs-check">
+          <label class="form-check-label" for="special-needs-check">Special Needs/Accessibility Requirements</label>
+        </div>
+        <div class="mb-3 hidden" id="special-needs-details">
+          <label for="special-needs" class="form-label">Please specify</label>
+          <textarea class="form-control" id="special-needs" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="promo-code" class="form-label">Promotional Code</label>
+          <input type="text" class="form-control" id="promo-code">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">How Did You Hear About Us?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="social-media" value="social-media">
+            <label class="form-check-label" for="social-media">Social Media</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="friend" value="friend">
+            <label class="form-check-label" for="friend">Friend</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="newsletter" value="newsletter">
+            <label class="form-check-label" for="newsletter">Newsletter</label>
+          </div>
+         
+        </div>
+      </div>
+
+     
+      <div class="form-section hidden" id="payment-information">
+        <u><h2>Payment Information</h2></u>
+        <div class="mb-3">
+          <label class="form-label">Payment Method</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="payment-method" id="credit-card" value="credit-card">
+            <label class="form-check-label" for="credit-card">Credit Card</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="payment-method" id="debit-card" value="debit-card">
+            <label class="form-check-label" for="debit-card">Debit Card</label>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="cardholder-name" class="form-label">Cardholder Name</label>
+          <input type="text" class="form-control" id="cardholder-name" required>
+        </div>
+        <div class="mb-3">
+          <label for="card-number" class="form-label">Card Number</label>
+          <input type="text" class="form-control" id="card-number" required>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="expiry-month" class="form-label">Expiration Month</label>
+            <select class="form-select" id="expiry-month" required>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="expiry-year" class="form-label">Expiration Year</label>
+            <select class="form-select" id="expiry-year" required>
+            
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2024">2027</option>
+              <option value="2025">2028</option>
+              <option value="2026">2029</option>
+              <option value="2024">2030</option>
+              <option value="2025">2031</option>
+              <option value="2026">2032</option>
+              <option value="2024">2033</option>
+              <option value="2025">2034</option>
+              <option value="2026">2035</option>
+              <option value="2024">2036</option>
+              <option value="2025">2037</option>
+              <option value="2026">2038</option>
+              <option value="2024">2039</option>
+              <option value="2025">2040</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="cvv-code" class="form-label">CVV Code</label>
+          <input type="text" class="form-control" id="cvv-code" required>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="use-same-address">
+          <label class="form-check-label" for="use-same-address">Use same address as above</label>
+        </div>
+        <div id="billing-address" class="hidden">
+          <div class="mb-3">
+            <label for="billing-address-line-1" class="form-label">Billing Address Line 1</label>
+            <input type="text" class="form-control" id="billing-address-line-1">
+          </div>
+          <div class="mb-3">
+            <label for="billing-address-line-2" class="form-label">Billing Address Line 2</label>
+            <input type="text" class="form-control" id="billing-address-line-2">
+          </div>
+          <div class="mb-3">
+            <label for="billing-city" class="form-label">Billing City</label>
+            <input type="text" class="form-control" id="billing-city">
+          </div>
+          <div class="mb-3">
+            <label for="billing-state-province" class="form-label">Billing State/Province</label>
+            <input type="text" class="form-control" id="billing-state-province">
+          </div>
+          <div class="mb-3">
+            <label for="billing-country" class="form-label">Billing Country</label>
+            <select class="form-select" id="billing-country">
+             
+              <option value="India">India</option>
+        
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="billing-postal-code" class="form-label">Billing Postal Code/ZIP Code</label>
+            <input type="text" class="form-control" id="billing-postal-code">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="form-section">
+        <u><h2>Confirmation and Submission</h2></u>
+        <div class="mb-3">
+          <label for="summary" class="form-label">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ea pariatur commodi esse ex, provident debitis ipsam voluptatibus libero exercitationem deleniti ad obcaecati veritatis earum, dolores optio laborum a nesciunt iure repellendus voluptas quis numquam odit nisi? Aperiam doloremque officia molestiae tempora, quidem mollitia ab dolores vitae est incidunt perferendis.</label>
+          <div id="summary" class="border p-3"></div>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="terms-check" required>
+          <label class="form-check-label" for="terms-check">I agree to the <a href="#">terms and conditions</a></label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-primary">Reset</button>
+      </div>
+    </form>
+  </div>
+</div>
+</i>
+
+</body>
+</html>
